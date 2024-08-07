@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ผลการวิเคราะห์ความเสี่ยงโรคหัวใจ</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f5f5f5; }
+        .container { width: 50%; margin: auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .result { font-size: 20px; margin-top: 20px; }
+        .green { color: green; }
+        .yellow { color: yellow; }
+        .message { font-size: 14px; margin-top: 10px; text-align: center; }
+        a { color: #007bff; text-decoration: none; font-size: 16px; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ผลการวิเคราะห์</h1>
+        {% if prediction == 0 %}
+            <div class="result green">คุณมีไม่มีความเสี่ยงต่อการเป็นโรคหัวใจ</div>
+            <div class="message">
+                ดูแลสุขภาพ “หัวใจ” แข็งแรง ห่างไกลโรค<br>
+                โรคหัวใจมีแนวโน้มผู้ป่วยเพิ่มขึ้นเรื่อยๆ แม้ว่าโรคหัวใจจะเป็นโรคที่มีความรุนแรงและทำให้ถึงแก่ชีวิตได้ แต่สามารถป้องกันและรักษาได้หากตรวจพบตั้งแต่เนิ่นๆ เริ่มต้นดูแลสุขภาพหัวใจของคุณตั้งแต่วันนี้ เพื่อตัวคุณเองและคนที่คุณรัก<br>
+                ออกกำลังกายเป็นประจำสม่ำเสมอ<br>
+                ลดความเครียด พักผ่อนให้เพียงพอ<br>
+                หลีกเลี่ยงอาหารที่มีไขมันสูง หวานจัด เค็มจัด<br>
+                งดสูบบุหรี่ งดเครื่องดื่มแอลกอฮอล์<br>
+                ตรวจสุขภาพอย่างน้อยปีละ 1 ครั้ง<br>
+                ควบคุมน้ำหนักให้อยู่ในเกณฑ์ อย่าปล่อยให้มีภาวะอ้วน
+            </div>
+        {% else %}
+            <div class="result yellow">คุณมีความเสี่ยงต่อการเป็นโรคหัวใจ</div>
+            <div class="message">
+                ควรระวังและดูแลสุขภาพอย่างเต็มที่เพื่อลดความเสี่ยงในการเป็นโรคหัวใจ รวมถึงการรับประทานอาหารที่เป็นประโยชน์ ออกกำลังกายเป็นประจำ ลดความเครียด และควบคุมปัจจัยที่สามารถควบคุมได้ เช่น น้ำหนัก และความดันโลหิต และปฏิบัติตามคำแนะนำจากแพทย์หรือผู้ให้คำปรึกษาทางการแพทย์เพื่อรักษาสุขภาพหัวใจให้ดีที่สุด
+            </div>
+        {% endif %}
+        <a href="/">กลับไปที่หน้าแรก</a>
+    </div>
+</body>
+</html>
